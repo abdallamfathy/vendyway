@@ -5,6 +5,10 @@ import Title from '../Title'
 const Tags = () => {
     // 'Services , Our Menu , Pizza , Cupcake'
     const [checked , setChecked] = useState(false);
+    console.log(checked);
+    console.log(setChecked);
+    
+    
     const [Tags , setTags] = useState([
         {
             id:1,
