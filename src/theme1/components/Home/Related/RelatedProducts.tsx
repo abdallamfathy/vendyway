@@ -18,6 +18,7 @@ export default function RelatedProducts() {
 
   return (
     <>
+        <div className='flex justify-center'>
       <Swiper
         slidesPerView={7}
         spaceBetween={20}
@@ -25,7 +26,7 @@ export default function RelatedProducts() {
             {   
                 0: {
                     slidesPerView: 2,
-                    spaceBetween: 10,
+                    spaceBetween: 50,
                 },
                 768: {
                     slidesPerView: 4,
@@ -49,6 +50,7 @@ export default function RelatedProducts() {
         modules={[Pagination , Navigation]}
         className="mySwiper"
       >
+
         {
             product.map((prod) => (
                 <SwiperSlide key={prod.id}>
@@ -57,6 +59,7 @@ export default function RelatedProducts() {
             ))
         }
       </Swiper>
+        </div>
     </>
   );
 }

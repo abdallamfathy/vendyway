@@ -54,13 +54,14 @@ export default function SimilarProducts() {
         modules={[Pagination , Navigation]}
         className="mySwiper"
       >
+
         {
-            product.map((prod) => (
-                <SwiperSlide>
+          product.map((prod) => (
+            <SwiperSlide>
                 <ProductCard {...prod} />
                 </SwiperSlide>
             ))
-        }
+          }
       </Swiper>
     </>
   );
