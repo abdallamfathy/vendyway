@@ -35,7 +35,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ options, active, onHandleActive }) 
 
           {/*  Mobile Menu */}
 
-        <div id="side-menu" className="md:hidden fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-0 bg-white w-80 dark:bg-gray-800" tabIndex={-1} aria-labelledby="drawer-label">
+        <div id="side-menu" className="md:hidden fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform duration-300 translate-x-0 bg-white w-80 " tabIndex={-1} aria-labelledby="drawer-label">
            <div className='flex flex-col justify-between h-full p-4'>
            <div className='flex justify-between items-center '>
                 <div className='flex gap-2 items-center'>
