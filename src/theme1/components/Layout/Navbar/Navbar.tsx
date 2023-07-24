@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
 
       <div
         id="drawer-example"
-        className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform  delay-300 bg-gray1 w-80  ${
+        className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform  duration-300 bg-gray1 w-80  ${
           showMenu ? "" : "-translate-x-full"
         }`}
         tabIndex={-1}
