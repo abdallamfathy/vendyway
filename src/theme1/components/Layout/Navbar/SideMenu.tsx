@@ -12,7 +12,7 @@ interface SideMenuProps {
     handleShowMenu:() => void;
 }
 
-const SideMenu: React.FC<SideMenuProps> = ({Navigation , handleShowMenu}) => {
+const SideMenu: React.FC<SideMenuProps> = ({Navigation}) => {
   useEffect(() => {
     const button = document.querySelector('[data-drawer-target="drawer-example"]');
     const drawer = document.getElementById('drawer-example');

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReactSlider from 'react-slider';
-import Slider from 'react-slider';
 
 const RangeInput: React.FC = () => {
   const [value, setValue] = useState<number[]>([25,75]); // Initial range values
