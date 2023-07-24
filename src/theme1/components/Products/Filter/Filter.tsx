@@ -7,9 +7,9 @@ import Tags from "./Tags/Tags"
 
 const Filter = () => {
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto">
         <div className="flex justify-between items-start">
-            <div className="flex flex-col gap-4 w-90">
+            <div className="flex flex-col gap-4 w-full">
               <Category/>
               <PriceFilter/>
               <Latest/>

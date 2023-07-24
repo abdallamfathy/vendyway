@@ -7,7 +7,7 @@ export interface BannerProps {
 
 export default function Banner (props: BannerProps) {
   return (
-    <div className='relative'>
+    <div className='relative max-md:hidden'>
         <img src={banner} alt="Banner" className='w-full max-h-96 object-cover object-bottom' />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col gap-3  items-center">
             <h1 className="text-[40px] font-bold font-playfair">{props.title}</h1>

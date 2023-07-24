@@ -9,9 +9,12 @@
     @apply text-white border-b-2 border-white 
 }
 
+.sideMenu{
+    @apply text-dark1 font-medium border-none
+}
+
 .footer {
     box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.03);
-    
 }
 
 .checkbox-container {
@@ -43,7 +46,6 @@
     width: 25px;
     @apply border-2 border-[#DCDCDC] rounded-md
   }
-  
   .checkbox-container input:checked ~ .checkmark {
     background-color: #FF0A54;
     font-weight: 500;
@@ -64,6 +66,47 @@
   .checkbox-container .checkmark:after {
     left: 10px;
     top: 6px;
+    width: 5px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+
+
+
+  
+
+  
+  .checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px !important;
+    width: 20px !important;
+    @apply border-2 border-[#DCDCDC] rounded-sm
+  }
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #FF0A54;
+    font-weight: 500;
+    @apply border-none
+  }
+
+  
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark2:after {
+    left: 8px;
+    top: 3px;
     width: 5px;
     height: 11px;
     border: solid white;
@@ -107,4 +150,77 @@
 }
 .slider .track.track-1 {
     background: #FF0A54;
+}
+
+.showShadow {
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.teamShadow {
+  box-shadow: 0px 0px 80px 0px rgba(205, 205, 205, 0.25);
+
+}
+
+.modalShadow {
+  box-shadow: 0px 0px 234px 0px rgba(0, 0, 0, 0.03);
+}
+
+.cartShadow {
+  box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.03);
+
+}
+
+.checkoutShadow {
+  filter: drop-shadow(0px 0px 76px rgba(0, 0, 0, 0.03));
+}
+
+.avatarShadow {
+  box-shadow: 0px 10px 30px 0px rgba(44, 43, 73, 0.20);
+}
+
+/* Custom radio input styles */
+.custom-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #c1c1c1; /* Replace #e2e8f0 with your desired border color */
+  border-radius: 9999px; /* To make the border circular and create a radio appearance */
+  width: 1rem; /* Customize the width of the outer circle */
+  height: 1rem; /* Customize the height of the outer circle */
+  /* outline: none; */
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  padding: 1px;
+}
+
+/* Custom radio input styles when checked */
+.custom-radio:checked {
+  background-color: white; /* Replace #ff0000 with your desired color when selected */
+  border-color: #FF0A54;
+   /* Replace #ff0000 with your desired border color when selected */
+}
+
+/* Custom radio dot styles */
+.custom-radio::before {
+  content: '';
+  display: block;
+  width: 0.5rem; /* Customize the width of the dot */
+  height: 0.5rem; /* Customize the height of the dot */
+  background-color: #FF0A54; /* Replace #ff0000 with your desired color of the dot when selected */
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hide the dot when not checked */
+}
+
+/* Show the dot when the radio input is checked */
+.custom-radio:checked::before {
+  opacity: 1;
+}
+
+.toggle {
+  --tw-translate-x: -24rem/* -384px */;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

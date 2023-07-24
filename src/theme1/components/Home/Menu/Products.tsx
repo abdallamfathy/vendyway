@@ -110,7 +110,7 @@ const Products = () => {
 
     
   return (
-    <div className="flex flex-wrap flex-1 justify-center gap-6 gap-y-10 items-center">
+    <div className="flex flex-wrap flex-1 justify-center gap-6 gap-y-10 items-center ">
         {
             products.map((product) => (
                 <ProductCard 
