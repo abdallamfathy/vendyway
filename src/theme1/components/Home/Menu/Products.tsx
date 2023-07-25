@@ -106,11 +106,16 @@ export const products : Product[] = [
         category: 'the good bowl'
     },
 ]
-const Products = () => {
+
+interface ProductsProps {
+    menuPage?: boolean | undefined,
+}
+
+const Products: React.FC<ProductsProps> = ({menuPage}) => {
 
     
   return (
-    <div className=" grid grid-flow-row grid-cols-2 gap-x-4 gap-y-6 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 md:gap-x-6 md:gap-y-10  ">
+    <div className={`grid grid-flow-row grid-cols-2 ${menuPage ? 'lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5' : '2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4'}  gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-10`}>
         {
             products.map((product) => (
                 <ProductCard 
