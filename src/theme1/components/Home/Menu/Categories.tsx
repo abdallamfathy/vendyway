@@ -7,7 +7,16 @@ import waffle from '../../../../assets/theme1/images/categories/waffle.png'
 import bread from '../../../../assets/theme1/images/categories/bread.png'
 import rainbow from '../../../../assets/theme1/images/categories/rainbow.png'
 import CategoryCard from './CategoryCard'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import {  Pagination , Autoplay} from 'swiper/modules';
 
 export interface CategoryItems {
     id: number;
@@ -68,7 +77,8 @@ const Categories = () => {
         }
     ]
   return (
-    <div className='flex flex-wrap justify-center items-center gap-6'>
+        <>
+    <div className='md:flex hidden flex-wrap justify-center items-center gap-6'>
         {
             categories.map((category) => (
                 <CategoryCard
@@ -81,6 +91,34 @@ const Categories = () => {
             ))
         }
     </div>
+
+     {/* Mobile */}
+     <div className='w-full md:hidden'>
+    <Swiper
+        grabCursor={true}
+        slidesPerView={4}
+        modules={[ Pagination , Autoplay]}
+        autoplay
+        className="mySwiper"
+      >
+        {
+            categories.map((category) => (
+                <SwiperSlide>
+                <CategoryCard
+                    key={category.id}
+                    id={category.id}
+                    title={category.title}
+                    image={category.image}
+                    active={category.active}
+                    />
+                    </SwiperSlide>
+            ))
+        }
+        
+
+      </Swiper>
+    </div>
+    </>
   )
 }
 

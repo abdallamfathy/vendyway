@@ -50,7 +50,8 @@ const Navbar: React.FC = () => {
   };
   return (
     <>
-      <div className="container mx-auto py-4 max-md:p-4">
+    <div className="bg-white sticky top-0  shadow-sm z-50">
+      <div className="container mx-auto py-4 max-md:p-4 ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-5">
             <RiMenu2Fill
@@ -69,7 +70,7 @@ const Navbar: React.FC = () => {
             <Link to="/cart">
               <img src={shopBag} alt="shopBag" />
             </Link>
-            <Link onClick={toggleMenu}  to="/user-dashboard">
+            <Link   onClick={toggleMenu} to="/user-dashboard">
               <BsPerson size={30} className="" />
             </Link>
             <Link to={'/sign-up'} className="max-md:hidden bg-pink1 text-white rounded-full p-2 px-5 hover:bg-orange-500 transition-colors duration-400 ease-in ">
@@ -95,7 +96,7 @@ const Navbar: React.FC = () => {
 
       <div
         id="drawer-example"
-        className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform  duration-300 bg-gray1 w-80  ${
+        className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-gray1 w-80  ${
           showMenu ? "" : "-translate-x-full"
         }`}
         tabIndex={-1}
@@ -154,6 +155,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 };
