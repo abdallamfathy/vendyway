@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "/src/assets/theme1/icons/logo.png";
 import shopBag from "/src/assets/theme1/icons/shopBag.png";
 import SearchInput from "../SearchInput";
-import { BsPerson } from "react-icons/bs";
+import { BsPerson, BsSearch } from "react-icons/bs";
 import { RiMenu2Fill } from "react-icons/ri";
 import home from "/src/assets/theme1/icons/sidemenu/home.svg";
 import menu from "/src/assets/theme1/icons/sidemenu/menu.svg";
@@ -90,13 +90,14 @@ const Navbar: React.FC = () => {
                 <img src={logo} alt="logo" />
               </Link>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center md:gap-5 gap-3">
               <div className="max-md:hidden">
                 <SearchInput />
               </div>
               <Link to="/cart">
                 <img src={shopBag} alt="shopBag" />
               </Link>
+              <BsSearch className="hidden max-md:block text-xl" />
               <Link onClick={toggleMenu} to="/user-dashboard">
                 <BsPerson size={30} className="" />
               </Link>
@@ -106,9 +107,6 @@ const Navbar: React.FC = () => {
                 Sign In
               </Link>
             </div>
-          </div>
-          <div className="md:hidden flex justify-center mt-5 ">
-            <SearchInput />
           </div>
         </div>
         <div className="md:flex hidden justify-center items-center md:gap-20 gap-5  bg-pink1 text-[#EBEBEB] font-medium py-4 ">
@@ -120,6 +118,7 @@ const Navbar: React.FC = () => {
             );
           })}
         </div>
+        
 
         {/* side menu */}
 
@@ -186,6 +185,9 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div  className="md:hidden relative  top-0 flex justify-center mt-5">
+            <SearchInput />
       </div>
     </>
   );
