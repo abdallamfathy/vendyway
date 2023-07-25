@@ -15,7 +15,7 @@ import { EffectCoverflow, Pagination , Autoplay} from 'swiper/modules';
 
 export default function HeroSlider() {
   return (
-    <div className='container mx-auto md:w-120  '>
+    <div className='container mx-auto md:w-120 '>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -33,13 +33,13 @@ export default function HeroSlider() {
         className="mySwiper"
       >
         <SwiperSlide className=' flex md:justify-end justify-center items-end '>
-          <img src={slider1} className='md:w-[350px] md:h-[525px] w-2/3 h-80 object-fit rounded-lg'/>
+          <img src={slider1} className='md:w-[350px] md:h-[525px] w-2/3 h-90 z-50 object-fit rounded-lg'/>
         </SwiperSlide>
         <SwiperSlide className=' flex md:justify-end justify-center'>
-        <img src={slider2} className='md:w-[350px] md:h-[525px]  w-2/3 h-80 object-fit rounded-lg'/>
+        <img src={slider2} className='md:w-[350px] md:h-[525px]  w-2/3 h-90 z-50 object-fit rounded-lg'/>
         </SwiperSlide>
         <SwiperSlide className=' flex md:justify-end justify-center'>
-        <img src={slider3} className='md:w-[350px] md:h-[525px] w-2/3 h-80 object-fit rounded-lg'/>
+        <img src={slider3} className='md:w-[350px] md:h-[525px] w-2/3 h-90 z-50 object-fit rounded-lg'/>
         </SwiperSlide>
 
       </Swiper>

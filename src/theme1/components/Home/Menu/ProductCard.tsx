@@ -18,8 +18,8 @@ export default function ProductCard (product: Product) {
         }
 
       </div>
-      <img src={product?.image} alt="product image" className='rounded-lg w-full h-38  md:h-42'/>
         <Link to='/product/1'><div className='flex flex-col gap-2'>
+      <img src={product?.image} alt="product image" className='rounded-lg w-full h-38  md:h-42'/>
         <h3 className='text-center font-semibold leading-6 max-md:text-sm'>{product?.title}</h3>
         <h4 className='text-mgray1 md:text-sm text-xs'>{product?.category}</h4>
         <p>${product?.price}</p>

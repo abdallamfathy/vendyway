@@ -103,9 +103,8 @@ const Categories = () => {
       >
         {
             categories.map((category) => (
-                <SwiperSlide>
+                <SwiperSlide key={category.id}>
                 <CategoryCard
-                    key={category.id}
                     id={category.id}
                     title={category.title}
                     image={category.image}
