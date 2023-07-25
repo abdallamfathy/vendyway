@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import '../../../../index.css';
 
 // import required modules
-import { Pagination , Navigation } from 'swiper/modules';
+import { Pagination , Navigation, Autoplay } from 'swiper/modules';
 import { Product, products } from "../Menu/Products";
 import ProductCard from "../Menu/ProductCard";
 
@@ -18,7 +18,6 @@ export default function RelatedProducts() {
 
   return (
     <>
-        <div className='flex justify-center'>
       <Swiper
         slidesPerView={7}
         spaceBetween={20}
@@ -26,7 +25,7 @@ export default function RelatedProducts() {
             {   
                 0: {
                     slidesPerView: 2,
-                    spaceBetween: 50,
+                    spaceBetween: 10,
                 },
                 768: {
                     slidesPerView: 4,
@@ -47,10 +46,10 @@ export default function RelatedProducts() {
             }       
         }
         // navigation
-        modules={[Pagination , Navigation]}
+        modules={[Pagination , Navigation, Autoplay]}
+        autoplay
         className="mySwiper"
       >
-
         {
             product.map((prod) => (
                 <SwiperSlide key={prod.id}>
@@ -59,7 +58,6 @@ export default function RelatedProducts() {
             ))
         }
       </Swiper>
-        </div>
     </>
   );
 }
