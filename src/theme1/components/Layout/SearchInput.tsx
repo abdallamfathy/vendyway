@@ -4,7 +4,7 @@ const SearchInput = () => {
   return (
     <div className="rounded-xl border border-[#808080] text-dark1 px-4 p-2 flex gap-2 justify-start items-center w-75">
         <img src={search} alt="searchIcon" />
-        <input type="search" className="border-none outline-none placeholder:text-[#808080]" placeholder="Search"  />
+        <input type="search" className="border-none outline-none placeholder:text-[#808080] w-5 bg-pink1" placeholder="Search"  />
     </div>
   )
 }
