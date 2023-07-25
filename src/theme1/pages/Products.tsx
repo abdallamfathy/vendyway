@@ -8,7 +8,7 @@ const Products = () => {
   return (
     <>  
         <Banner title="Mini Cake" page="Menu"/>
-        <div className="container mx-auto flex justify-between gap-22 max-md:p-4 my-10">
+        <div className="container mx-auto flex justify-between gap-22 max-md:px-4 max-md:pb-4 md:my-10">
         <div className="w-1/4 max-md:hidden">
         <Filter/>
         </div>
