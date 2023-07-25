@@ -14,11 +14,13 @@ import UserDashboard from './theme1/pages/UserDashboard';
 import Order from './theme1/pages/Order';
 import TrackOrder from './theme1/pages/TrackOrder';
 import CancelOrder from './theme1/pages/CancelOrder';
+import Scroll from './theme1/utils/Scroll';
 
 function App() {
 
   return (
     <Router>
+      <Scroll>
       <Layout>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -37,6 +39,7 @@ function App() {
         <Route path='/cancel-order/:orderId' element={<CancelOrder/>}/>
       </Routes>
       </Layout>
+      </Scroll>
     </Router>
   )
 }
