@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
           tabIndex={-1}
           aria-labelledby="drawer-label">
           <div
-            className="flex flex-col justify-between h-full p-4"
+            className="flex flex-col justify-evenly h-full p-4"
             ref={divRef}>
             <div className="flex justify-between items-center ">
               <div className="flex gap-2 items-center">
