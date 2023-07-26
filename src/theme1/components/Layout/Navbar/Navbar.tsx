@@ -74,6 +74,13 @@ const Navbar: React.FC = () => {
 
   const divRef = useClickOutside(handleOutsideClick);
   const { toggleMenu } = useOrderContext();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  
 
   return (
     <>
@@ -97,7 +104,7 @@ const Navbar: React.FC = () => {
               <Link to="/cart">
                 <img src={shopBag} alt="shopBag" />
               </Link>
-              <BsSearch className="hidden max-md:block text-xl" />
+              <BsSearch className="hidden max-md:block text-xl" onClick={scrollToTop} />
               <Link onClick={toggleMenu} to="/user-dashboard">
                 <BsPerson size={30} className="" />
               </Link>
