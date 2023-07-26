@@ -5,7 +5,7 @@ import Header from "./Header"
 
 const Container = () => {
   return (
-    <div className="container mx-auto md:my-16 mb-8">
+    <div className="container mx-auto md:my-16 my-8">
             <div className="flex md:flex-row flex-col gap-6 justify-between">
                 <div className="flex flex-col md:gap-4 w-full">
                 <Header/>

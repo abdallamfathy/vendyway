@@ -62,7 +62,7 @@ const Container: React.FC = () => {
     
       const ActiveComponent = loadComponent(active);
   return (
-    <div className='container mx-auto my-10'>
+    <div className='container mx-auto md:my-10'>
         <div className='flex md:flex-row flex-col justify-between gap-6 items-start'>
            <div className={`md:w-3/12  ${!isMenuOpen && 'hidden'}`}>
            <SideMenu active={active} onHandleActive={handleActive} options={options}/>
