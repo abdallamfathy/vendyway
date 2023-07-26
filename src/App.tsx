@@ -15,6 +15,7 @@ import Order from './theme1/pages/Order';
 import TrackOrder from './theme1/pages/TrackOrder';
 import CancelOrder from './theme1/pages/CancelOrder';
 import Scroll from './theme1/utils/Scroll';
+import MapComponent from './theme1/utils/MapComponent';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/order/:orderId' element={<Order/>}/>
         <Route path='/track-order/:orderId' element={<TrackOrder/>}/>
         <Route path='/cancel-order/:orderId' element={<CancelOrder/>}/>
+        <Route path='/map' element={<MapComponent/>}/>
       </Routes>
       </Layout>
       </Scroll>
