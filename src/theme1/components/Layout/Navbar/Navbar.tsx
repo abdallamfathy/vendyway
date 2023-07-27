@@ -57,6 +57,7 @@ const Navbar: React.FC = () => {
   ];
 
   const [showMenu, setShowMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
   useEffect(() => {
     setShowMenu(false);
@@ -104,7 +105,7 @@ const Navbar: React.FC = () => {
               <Link to="/cart">
                 <img src={shopBag} alt="shopBag" />
               </Link>
-              <BsSearch className="hidden max-md:block text-xl" onClick={scrollToTop} />
+              <BsSearch className="hidden max-md:block text-xl" onClick={() => {scrollToTop(); setShowSearch(!showSearch)}} />
               <Link onClick={toggleMenu} to="/user-dashboard">
                 <BsPerson size={30} className="" />
               </Link>
@@ -193,9 +194,14 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <div  className="md:hidden relative  top-0 flex justify-center mt-5">
-            <SearchInput />
-      </div>
+              {
+                showSearch && (
+                  <div  className="md:hidden relative  top-0 flex justify-center mt-5">
+                  <SearchInput />
+            </div>
+      
+                )
+              }
     </>
   );
 };
