@@ -8,8 +8,6 @@ const Delivery: React.FC = () => {
     <div className='flex flex-col gap-12'>
         <DeliveryInfo/>
           <Schedule/>
-        <div className='max-md:hidden'>
-        </div>
     </div>
   )
 }

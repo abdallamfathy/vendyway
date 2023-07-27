@@ -6,7 +6,7 @@ import OrderSummary from './OrderSummary'
 
 const Container: React.FC = () => {
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex md:flex-row flex-col gap-6'>
         <div className='md:w-2/3 w-full'>
             <OrderCard/>
         </div>

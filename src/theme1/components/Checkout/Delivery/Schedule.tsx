@@ -14,7 +14,7 @@ const Schedule: React.FC  = () => {
             <span className="checkmark" />
             <p className='text-dark1 font-semibold '>Schedule Delivery</p>
           </label>
-          <div className='bg-white px-14 py-6 checkoutShadow'>
+          <div className='bg-white md:px-14 px-4 py-6 checkoutShadow'>
         <div className='flex flex-col gap-6'>
             <Input type='date' title='Date'/>
             <Input type='text' title='Note'/>

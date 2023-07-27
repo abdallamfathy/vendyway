@@ -13,7 +13,7 @@ const OrderSummary:React.FC = () => {
   return (
     <div className='flex flex-col '>
       <Header title='Order Summary'/>
-      <div className='flex flex-col gap-22 px-6 py-8 bg-white checkoutShadow'>
+      <div className='flex flex-col gap-22 md:px-6 px-4 py-8 bg-white checkoutShadow'>
        <div className='flex flex-col gap-5'>
        <SummaryCard  img={item1} name={'Mini Sweet Cake Strawberry'} desc={'Strawberry purst'} qty={2} price={49}  />
        <hr className='w-3/4 h-[1px] bg-mgray1 self-center'/>
