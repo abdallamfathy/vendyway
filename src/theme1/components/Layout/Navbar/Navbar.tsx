@@ -12,6 +12,7 @@ import contact from "/src/assets/theme1/icons/sidemenu/contact.svg";
 import avatar from "/src/assets/theme1/images/avatar.png";
 import off from "/src/assets/theme1/icons/sidemenu/off.svg";
 import { useOrderContext } from "../../../utils/OrderContext";
+import Button from "../../Extras/Button";
 
 const useClickOutside = (callback: () => void) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -109,11 +110,7 @@ const Navbar: React.FC = () => {
               <Link onClick={toggleMenu} to="/user-dashboard">
                 <BsPerson size={30} className="" />
               </Link>
-              <Link
-                to={"/sign-up"}
-                className="max-md:hidden bg-pink1 text-white rounded-full p-2 px-5 hover:bg-orange-500 transition-colors duration-400 ease-in ">
-                Sign In
-              </Link>
+              <Button link="/sign-up" text="Sign Up" className="max-md:hidden hover:bg-orange-500 transition-colors duration-400 ease-in" variant={'primary'} size="sm"/>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../Button'
 import Header from '../Header';
+import Button from '../../Extras/Button';
 
 interface AddressCardProps {
     handleShow: (component: string) => void;
@@ -21,7 +21,12 @@ const AddressCard: React.FC<AddressCardProps> = ({handleShow}) => {
         </div>
     </div>
         <div className='max-md:self-center' onClick={() => handleShow('newAddress')}>
-        <Button text='Add new Address'/>
+        <Button
+              text="Add new address"
+              className="py-4"
+              variant={'primary'}
+              size="xl"
+            />
         </div>
     </div>
   )

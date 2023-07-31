@@ -3,13 +3,13 @@ import avatar from "/src/assets/theme1/images/extras/avatar.png";
 import camera from "/src/assets/theme1/icons/camera.png";
 import Input from "../Input";
 import Password from "./Password";
-import Button from "../Button";
+import Button from "../../Extras/Button";
 
 const AccountInfo: React.FC = () => {
   const [show, setShow] = useState("info");
   const handleShow = (component: string) => {
     setShow(component);
-  }
+  };
   return (
     <>
       {show === "info" ? (
@@ -44,21 +44,25 @@ const AccountInfo: React.FC = () => {
           </div>
           <div className="flex md:flex-row flex-col items-center relative">
             <Input title="Password" type="password" placeholder="********" />
-            <button
-              className="text-pink1 absolute right-5 bottom-5 text-sm font-semibold cursor-pointer"
-              onClick={() => handleShow("password")}>
-              Change
-            </button>
+            <Button
+              text="Change"
+              className="absolute right-5 bottom-3 text-sm font-semibold cursor-pointer"
+              onClick={() => handleShow("password")}
+              variant={"text"}
+            />
           </div>
           <div className="max-md:self-center ">
-            <Button text='Save Changes'/>
+            <Button
+              text="Save Changes"
+              className="py-4"
+              variant={"primary"}
+              size="xl"
+            />
           </div>
         </div>
-      ) : show === 'password' ? (
-        <Password  handleShow={handleShow}/>
-      )
-    : null
-    }
+      ) : show === "password" ? (
+        <Password handleShow={handleShow} />
+      ) : null}
     </>
   );
 };

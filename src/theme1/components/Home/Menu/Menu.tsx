@@ -1,4 +1,4 @@
-import Button from './Button'
+import Button from '../../Extras/Button'
 import Categories from './Categories'
 import Products from './Products'
 import Title from './Title'
@@ -11,7 +11,7 @@ const Menu = () => {
         <Title span='Menu' title='OUR MENU' subtitle='That Always Makes You Fall In Love' />
         <Categories/>
         <Products/>
-        <Button/>
+        <Button link="/products" text="See All" className="font-medium max-md:text-sm" variant={'primary'} size='md'/>
         </div>
     </div>
   )

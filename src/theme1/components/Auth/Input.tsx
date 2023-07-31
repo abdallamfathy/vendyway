@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = (props) => {
     <div className="relative w-full rounded-xl border border-gray-200 p-4">
       <div className="flex justify-between items-center">
         <input
-          type={isPasswordVisible ? 'text' : 'password'}
+          type={!isPasswordVisible ? 'text' : 'password'}
           placeholder={props.placeholder}
           className="border-none outline-none bg-none focus:outline-none placeholder:text-mgray1 placeholder:text-sm"
         />

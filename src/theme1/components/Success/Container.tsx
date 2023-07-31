@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Cart/Summary/Button'
+import Button from '../Extras/Button'
 import success from '/src/assets/theme1/images/extras/success.png'
 
 const Container: React.FC = () => {
@@ -13,8 +13,8 @@ const Container: React.FC = () => {
         <p className='text-mgray1 leading-9'>we will send you a confirmation mail with your order details and tracking information</p>
         </div>
         <div className='flex flex-col gap-6 md:w-100 w-80'>
-            <Button primary text='Continue shopping' link='/products' />
-            <Button  text='Track Order' link='/track-order/1' />
+            <Button variant='primary' text='Continue shopping' link='/products' className="py-3" fullWidth />
+            <Button  className="border-2 py-3 font-medium" variant='outline'  text='Track Order' link='/track-order/1' fullWidth/>
         </div>
     </div>
   )

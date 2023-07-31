@@ -5,7 +5,7 @@ import item2 from '/src/assets/theme1/images/cart/item2.png'
 import item3 from '/src/assets/theme1/images/cart/item3.png'
 import PromoCode from '../../Cart/Summary/PromoCode'
 import Price from '../../Cart/Summary/Price'
-import Button from '../../Cart/Summary/Button'
+import Button from '../../Extras/Button'
 import SummaryCard from './SummaryCard'
 import Payment from '../Payment/Payment'
 
@@ -30,7 +30,7 @@ const OrderSummary:React.FC = () => {
         <PromoCode/>
         <Price/>
         <div className='max-md:hidden'>
-        <Button link='/order-success' text='Confirm Order' primary/>
+        <Button link='/order-success' text='Confirm Order' fullWidth variant='primary' className='py-3'/>
         </div>
       </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from './Button'
 import PromoCode from './PromoCode'
 import Price from './Price'
 import SummaryInfo from './SummaryInfo'
+import Button from '../../Extras/Button'
 
 
 const CartSummary: React.FC = () => {
@@ -12,8 +12,8 @@ const CartSummary: React.FC = () => {
         <PromoCode/>
         <Price/>
         <div className='flex flex-col gap-3'>
-        <Button text="Go to checkout" link="/checkout" primary />
-        <Button text="Go back to shopping" link="/products"  />
+          <Button text='Go to checkout' link='/checkout' variant='primary' fullWidth className='text-sm font-medium py-3'/>
+          <Button text='Go back to shopping ' link='/products' variant='outline' fullWidth className='text-sm  font-medium py-3 border-2'/>
         </div>
         <SummaryInfo/>
     </div>
