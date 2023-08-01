@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "./Input";
 import Button from "../Extras/Button";
+import Input from "../Extras/Input";
 
 const ContactForm: React.FC = () => {
   return (
@@ -8,23 +8,35 @@ const ContactForm: React.FC = () => {
       <h1 className="font-bold text-dark1 md:text-3xl text-xl">Contact us</h1>
       <div className="flex flex-col gap-7">
         <div className="flex md:flex-row flex-col justify-between gap-6">
-          <Input type="text" title="Name" placeholder="Enter your name..." />
           <Input
+            fullWidth
+            type="text"
+            label="Name"
+            placeholder="Enter your name..."
+          />
+          <Input
+            fullWidth
             type="email"
-            title="Email"
+            label="Email"
             placeholder="Your email address..."
           />
         </div>
         <div className="flex md:flex-row flex-col justify-between gap-6">
           <Input
+            fullWidth
             type="text"
-            title="Subject"
+            label="Subject"
             placeholder="Enter your subject..."
           />
-          <Input type="text" title="Enquiry type" placeholder="Advertising" />
+          <Input
+            fullWidth
+            type="text"
+            label="Enquiry type"
+            placeholder="Advertising"
+          />
         </div>
         <div className="flex flex-col gap-3 w-full">
-          <label htmlFor="asd" className="text-mgray1 text-sm font-medium">
+          <label htmlFor="asd" className="text-dark1">
             Message
           </label>
           <textarea

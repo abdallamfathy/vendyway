@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import avatar from "/src/assets/theme1/images/extras/avatar.png";
 import camera from "/src/assets/theme1/icons/camera.png";
-import Input from "../Input";
+import Input from "../../Extras/Input";
 import Password from "./Password";
 import Button from "../../Extras/Button";
 
@@ -27,23 +27,39 @@ const AccountInfo: React.FC = () => {
             />
           </div>
           <div className="flex md:flex-row flex-col justify-between gap-6">
-            <Input title="First Name" type="text" placeholder="Hager" />
-            <Input title="Last Name" type="text" placeholder="Tarek" />
+            <Input
+              fullWidth
+              label="First Name"
+              type="text"
+              placeholder="Hager"
+            />
+            <Input
+              fullWidth
+              label="Last Name"
+              type="text"
+              placeholder="Tarek"
+            />
           </div>
           <div className="flex md:flex-row flex-col justify-between gap-6">
-            <Input title="Display Name" type="text" placeholder="" />
-            <Input title="Gender" type="text" placeholder="Female" />
+            <Input fullWidth label="Display Name" type="text" placeholder="" />
+            <Input fullWidth label="Gender" type="text" placeholder="Female" />
           </div>
           <div className="flex md:flex-row flex-col justify-between gap-6">
             <Input
-              title="Email"
+              fullWidth
+              label="Email"
               type="email"
               placeholder="hagett10@gmail.com"
             />
-            <Input title="Phone" type="tel" placeholder="12345678" />
+            <Input fullWidth label="Phone" type="tel" placeholder="12345678" />
           </div>
           <div className="flex md:flex-row flex-col items-center relative">
-            <Input title="Password" type="password" placeholder="********" />
+            <Input
+              fullWidth
+              label="Password"
+              type="password"
+              placeholder="********"
+            />
             <Button
               text="Change"
               className="absolute right-5 bottom-3 text-sm font-semibold cursor-pointer"

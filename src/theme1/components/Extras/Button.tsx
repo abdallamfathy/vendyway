@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, text , img , className , disab
        disabled={disabled} 
        onClick={() => {link && navigate(link);
        onClick ? onClick() : null}}>
-       {icon} <img src={img} alt="image" /> {text} {loading ? loadingText : null}
+       {icon} {img && <img src={img} alt="image" />} {text} {loading ? loadingText : null}
        </button>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../Input";
+import Input from "../../Extras/Input";
 import CheckInput from "./CheckInput";
 import Button from "../../Extras/Button";
 
@@ -9,20 +9,20 @@ const AddressForm: React.FC<AddressFormProps> = () => {
   return (
     <div className="flex flex-col gap-8 max-md:text-sm">
       <div className="flex md:flex-row flex-col items-center gap-6">
-        <Input placeholder="" title="Full Name" type="text" />
-        <Input placeholder="" title="Phone" type="tel" />
+        <Input fullWidth label="Full Name" type="text" />
+        <Input fullWidth label="Phone" type="tel" />
       </div>
       <div className="flex md:flex-row flex-col items-center gap-6">
-        <Input placeholder="" title="Email" type="email" />
-        <Input placeholder="" title="City" type="text" />
+        <Input fullWidth label="Email" type="email" />
+        <Input fullWidth label="City" type="text" />
       </div>
       <div className="flex md:flex-row flex-col items-center gap-6">
         <div className="md:w-1/2 w-full">
-          <Input placeholder="" title="State" type="text" />
+          <Input fullWidth label="State" type="text" />
         </div>
         <div className="flex   items-center gap-4 md:w-1/2 w-full">
-          <Input placeholder="" title="ZIP" type="text" />
-          <Input placeholder="" title="State" type="text" />
+          <Input fullWidth label="ZIP" type="text" />
+          <Input fullWidth label="State" type="text" />
         </div>
       </div>
       <div className="flex flex-col gap-2">

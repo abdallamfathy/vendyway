@@ -1,6 +1,6 @@
 import React from 'react'
 import InputPass from './InputPass'
-import Button from '../Button'
+import Button from '../../Extras/Button'
 import Header from '../Header';
 
 interface PasswordProps {
@@ -16,7 +16,12 @@ const Password: React.FC<PasswordProps> = ({handleShow}) => {
         <InputPass title='New Password' type='password' placeholder=''/>
         <InputPass title='Re-type new password' type='password' placeholder=''/>
         <div className='w-fit max-md:self-center'>
-        <Button text='Save Changes'/>
+        <Button
+              text="Save Changes"
+              className="py-4"
+              variant={"primary"}
+              size="xl"
+            />
         </div>
     </div>
   )

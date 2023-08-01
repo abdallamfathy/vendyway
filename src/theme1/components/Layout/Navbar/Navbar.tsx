@@ -79,10 +79,9 @@ const Navbar: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
-  
 
   return (
     <>
@@ -106,11 +105,23 @@ const Navbar: React.FC = () => {
               <Link to="/cart">
                 <img src={shopBag} alt="shopBag" />
               </Link>
-              <BsSearch className="hidden max-md:block text-xl" onClick={() => {scrollToTop(); setShowSearch(!showSearch)}} />
+              <BsSearch
+                className="hidden max-md:block text-xl"
+                onClick={() => {
+                  scrollToTop();
+                  setShowSearch(!showSearch);
+                }}
+              />
               <Link onClick={toggleMenu} to="/user-dashboard">
                 <BsPerson size={30} className="" />
               </Link>
-              <Button link="/sign-up" text="Sign Up" className="max-md:hidden hover:bg-orange-500 transition-colors duration-400 ease-in" variant={'primary'} size="sm"/>
+              <Button
+                link="/sign-up"
+                text="Sign Up"
+                className="max-md:hidden hover:bg-orange-500 transition-colors duration-400 ease-in"
+                variant={"primary"}
+                size="sm"
+              />
             </div>
           </div>
         </div>
@@ -123,7 +134,6 @@ const Navbar: React.FC = () => {
             );
           })}
         </div>
-        
 
         {/* side menu */}
 
@@ -135,7 +145,7 @@ const Navbar: React.FC = () => {
           tabIndex={-1}
           aria-labelledby="drawer-label">
           <div
-            className="flex flex-col justify-evenly h-full p-4"
+            className="flex flex-col justify-between py-40 h-full p-4"
             ref={divRef}>
             <div className="flex justify-between items-center ">
               <div className="flex gap-2 items-center">
@@ -191,14 +201,11 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-              {
-                showSearch && (
-                  <div  className="md:hidden relative  top-0 flex justify-center mt-5">
-                  <SearchInput />
-            </div>
-      
-                )
-              }
+      {showSearch && (
+        <div className="md:hidden relative  top-0 flex justify-center mt-5">
+          <SearchInput />
+        </div>
+      )}
     </>
   );
 };
