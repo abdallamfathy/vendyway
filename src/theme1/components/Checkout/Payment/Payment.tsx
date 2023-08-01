@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Header";
-import Input from "./Input";
+import Input from "./PaymentInput";
 
 const Payment: React.FC = () => {
   return (

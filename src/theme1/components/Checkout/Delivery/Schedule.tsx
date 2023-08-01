@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from './Input'
+import Input from '../../Extras/Input'
 
 
 const Schedule: React.FC  = () => {
@@ -16,8 +16,8 @@ const Schedule: React.FC  = () => {
           </label>
           <div className='bg-white md:px-14 px-4 py-6 checkoutShadow'>
         <div className='flex flex-col gap-6'>
-            <Input type='date' title='Date'/>
-            <Input type='text' title='Note'/>
+            <Input fullWidth className='px-4' type='date' label='Date'/>
+            <Input fullWidth type='text' label='Note'/>
         </div>
     </div>
     </div>
